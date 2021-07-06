@@ -15,7 +15,7 @@
                     <a href="{{ route('show.homeabout') }}"><i class="fe fe-layout"></i> <span>Home Abouts Us</span></a>
                 </li>
                 <li>
-                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Services</span></a>
+                    <a href="{{ route('show.homeservices') }}"><i class="fe fe-layout"></i> <span>Home Services</span></a>
                 </li>
                 <li>
                     <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Protfolio</span></a>

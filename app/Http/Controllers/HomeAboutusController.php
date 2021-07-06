@@ -14,7 +14,7 @@ class HomeAboutusController extends Controller
         $aboutusdata  = Homeaboutus::latest()->get();
         return view('backend.layouts.homeabout.index' , [
 
-                'alldata'   => $aboutusdata,
+            'alldata'   => $aboutusdata,
 
         ]);
     }

@@ -38,6 +38,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
+    //home Services
+    Route::get('/home-services' , [App\Http\Controllers\HomeServicesController::class , 'Index'])->name('show.homeservices');
+    Route::get('/home-services-add' , [App\Http\Controllers\HomeServicesController::class , 'homeServicesAdd'])->name('homeservices.add');
+    Route::post('/home-services' , [App\Http\Controllers\HomeServicesController::class , 'homeServicesStore'])->name('homeservices.store');
+
 
     //Show Home Page (Front End)
     Route::get('/home' , [App\Http\Controllers\CompanyHomeController::class , 'Index'])->name('show.homepage');
