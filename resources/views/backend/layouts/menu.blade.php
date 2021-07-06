@@ -6,10 +6,22 @@
                     <span>Main</span>
                 </li>
                 <li class="active">
-                    <a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                    <a href="{{ route('show.homepage') }}"><i class="fe fe-home"></i> <span>Visit Website</span></a>
                 </li>
                 <li>
-                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+                    <a href="{{ route('show.hero') }}"><i class="fe fe-layout"></i> <span>Home Slider</span></a>
+                </li>
+                <li>
+                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Abouts Us</span></a>
+                </li>
+                <li>
+                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Services</span></a>
+                </li>
+                <li>
+                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Protfolio</span></a>
+                </li>
+                <li>
+                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Clients</span></a>
                 </li>
 
                 <li class="submenu">

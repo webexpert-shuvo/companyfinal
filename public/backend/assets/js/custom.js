@@ -16,7 +16,7 @@
 
 
 
-        // CKEDITOR.replace( 'logcontent' );
+         CKEDITOR.replace( 'logcontent' );
 
 
     });

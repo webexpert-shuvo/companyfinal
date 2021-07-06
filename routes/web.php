@@ -24,3 +24,16 @@ use Illuminate\Support\Facades\Route;
     Route::get('/admin-login' , [App\Http\Controllers\BackendController::class, 'AdminLogin'])->name('show.loginpage');
     Route::get('/admin-register' , [App\Http\Controllers\BackendController::class, 'AdminRegister'])->name('show.registerpage');
 
+
+    //home Slider Route
+    Route::get('/sliders' , [App\Http\Controllers\HomeHeroController::class, 'Index'])->name('show.hero');
+    Route::get('/sliders-create' , [App\Http\Controllers\HomeHeroController::class, 'heroAdd'])->name('hero.add');
+    Route::post('/sliders-create' , [App\Http\Controllers\HomeHeroController::class, 'heroStore'])->name('hero.store');
+    Route::get('/sliders-delete/{id}' , [App\Http\Controllers\HomeHeroController::class, 'heroDelete'])->name('hero.delete');
+
+
+
+
+
+    //Show Home Page (Front End)
+    Route::get('/home' , [App\Http\Controllers\CompanyHomeController::class , 'Index'])->name('show.homepage');

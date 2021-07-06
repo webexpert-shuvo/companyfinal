@@ -17,7 +17,7 @@ class BackendController extends Controller
     public function AdminRegister()
     {
 
-        return view('backend.register');
+        return view('backend.userregister');
     }
 
 
