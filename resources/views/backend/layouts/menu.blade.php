@@ -25,9 +25,11 @@
                 </li>
 
                 <li class="submenu">
-                    <a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
+                    <a href="#"><i class="fe fe-document"></i> <span>Blog</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a href="invoice-report.html">Invoice Reports</a></li>
+                        <li><a href="{{ route('show.category') }}">Category</a></li>
+                        <li><a href="invoice-report.html">Tags</a></li>
+                        <li><a href="invoice-report.html">Post</a></li>
                     </ul>
                 </li>
 

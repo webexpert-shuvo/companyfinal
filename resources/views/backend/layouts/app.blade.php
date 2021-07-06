@@ -56,6 +56,7 @@
 		<script src="{{ asset('backend/assets/js/chart.morris.js') }}"></script>
         <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="{{ asset('backend/assets/js/custom.js') }}"></script>
 
 

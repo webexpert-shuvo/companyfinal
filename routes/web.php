@@ -55,7 +55,14 @@ use Illuminate\Support\Facades\Route;
     Route::get('/home-clients-create' , [App\Http\Controllers\HomeClientController::class, 'homeClientAdd'])->name('homeclient.add');
     Route::post('/home-clients-create' , [App\Http\Controllers\HomeClientController::class, 'homeClientStore'])->name('homeclient.store');
 
-
+    //Backend Category
+    Route::get('/category' , [App\Http\Controllers\CategoryController::class , 'Index'])->name('show.category');
+    Route::post('/category-create' , [App\Http\Controllers\CategoryController::class , 'categoryStore'])->name('category.store');
+    Route::get('/category-all' , [App\Http\Controllers\CategoryController::class , 'categoryAll'])->name('category.all');
+    Route::get('/category-update/{id}' , [App\Http\Controllers\CategoryController::class , 'categoryUpdate'])->name('category.update');
+    Route::get('/category-delete/{id}' , [App\Http\Controllers\CategoryController::class , 'categoryDelete'])->name('category.delete');
+    Route::get('/category-edit/{id}' , [App\Http\Controllers\CategoryController::class , 'categoryEdit'])->name('category.edit');
+    Route::post('/category-edit/{id}' , [App\Http\Controllers\CategoryController::class , 'categoryNewupdate'])->name('category.newupdate');
 
 
     //Show Home Page (Front End)
