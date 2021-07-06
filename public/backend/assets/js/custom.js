@@ -132,13 +132,6 @@
 
         });
 
-
-
-
-
-
-
-
         //Category Delete
         $(document).on('click','a.cate_delete_btn',function(e){
             e.preventDefault();
@@ -159,13 +152,160 @@
 
                     allCate();
                 }
+            });
+        });
 
+
+        //  Tag update
+
+        $(document).on('click','a.tag_add_btn',function(e){
+            e.preventDefault();
+            $('#tag_add_modal').modal('show');
+        });
+
+        //Tag Show
+
+        function alltags(){
+
+            $.ajax({
+
+                url : '/tag-all',
+                success : function(data){
+
+                    $('tbody#alltag').html(data);
+                }
+
+            });
+
+
+        }
+
+        alltags();
+
+        //tag insert
+        $('form#tag_add_form').submit(function(e){
+            e.preventDefault();
+
+            $.ajax({
+
+                url : '/tag',
+                data : new FormData(this),
+                method: "POST",
+                contentType: false,
+                processData : false,
+                success : function(data){
+                    $('form#tag_add_form')[0].reset();
+                    $('#tag_add_modal').modal('hide');
+                    swal({
+                        title: "Good job!",
+                        text: "Tag Insert Successfull!",
+                        icon: "success",
+                        button: "Done!",
+                    });
+
+                    alltags();
+                }
+
+            });
+        });
+
+        //Tag Status Update
+
+        $(document).on('click','a.tag_status_btn',function(e){
+            e.preventDefault();
+
+            let tag_status_id = $(this).attr('tag_status_id');
+
+            $.ajax({
+
+                url : '/tag-statusupdate/'+tag_status_id,
+                success : function(data){
+
+                    swal({
+                        title: "Good job!",
+                        text: "Tag Status Updated Successfull!",
+                        icon: "success",
+                        button: "Done!",
+                    });
+
+                    alltags();
+                }
+
+
+            });
+        });
+
+        //Tag edit id
+        $(document).on('click','a.tag_edit_btn', function(e){
+            e.preventDefault();
+            let tag_edit_id = $(this).attr('tag_edit_id');
+            $('#tag_edit_modal').modal('show');
+            $.ajax({
+                url : '/tag-editedata/'+tag_edit_id,
+                success: function(data){
+
+                    $('form#tag_edit_form input[name="name"]').val(data.name);
+                }
+            });
+
+            //Tag Update
+            $('form#tag_edit_form').submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url : '/tag-editedata/'+tag_edit_id,
+                    data : new FormData(this),
+                    method : "POST",
+                    contentType : false,
+                    processData: false,
+                    success:  function(data){
+                        $('#tag_edit_modal').modal('hide');
+                        swal({
+                            title: "Good job!",
+                            text: "Tag Edit Updated Successfull!",
+                            icon: "success",
+                            button: "Done!",
+                        });
+
+                        alltags();
+                    }
+
+                });
+
+            });
+
+        });
+
+        //Tag Delete
+         $(document).on('click','a.tag_trash_btn',function(e){
+
+            e.preventDefault();
+
+            let tag_delete_id =  $(this).attr('tag_trash_id');
+
+            $.ajax({
+
+                url : '/tag-delete/'+tag_delete_id,
+                success: function(data){
+
+                    swal({
+                        title: "Good job!",
+                        text: "Tag Edit Deleted Successfull!",
+                        icon: "success",
+                        button: "Done!",
+                    });
+
+                    alltags();
+                }
 
             });
 
 
 
-        });
+         });
+
+
+
+
 
 
 
@@ -182,3 +322,8 @@
 
 
 })(jQuery)
+
+
+
+
+

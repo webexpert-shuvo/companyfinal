@@ -65,6 +65,16 @@ use Illuminate\Support\Facades\Route;
     Route::post('/category-edit/{id}' , [App\Http\Controllers\CategoryController::class , 'categoryNewupdate'])->name('category.newupdate');
 
 
+    //Tag Route
+    Route::get('/tag' , [App\Http\Controllers\TagController::class, 'Index'])->name('show.tag');
+    Route::post('/tag' , [App\Http\Controllers\TagController::class, 'tagStore'])->name('tag.store');
+    Route::get('/tag-all' , [App\Http\Controllers\TagController::class, 'tagAll'])->name('tag.all');
+    Route::get('/tag-statusupdate/{id}' , [App\Http\Controllers\TagController::class, 'tagStatusUpdate'])->name('tag.statusupdate');
+    Route::get('/tag-editedata/{id}' , [App\Http\Controllers\TagController::class, 'tagEditData'])->name('tag.edutdata');
+    Route::post('/tag-editedata/{id}' , [App\Http\Controllers\TagController::class, 'tagUpdate'])->name('tag.update');
+    Route::get('/tag-delete/{id}' , [App\Http\Controllers\TagController::class, 'tagDelete'])->name('tag.delete');
+
+
     //Show Home Page (Front End)
     Route::get('/home' , [App\Http\Controllers\CompanyHomeController::class , 'Index'])->name('show.homepage');
 

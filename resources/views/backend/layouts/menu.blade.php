@@ -28,7 +28,7 @@
                     <a href="#"><i class="fe fe-document"></i> <span>Blog</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a href="{{ route('show.category') }}">Category</a></li>
-                        <li><a href="invoice-report.html">Tags</a></li>
+                        <li><a href="{{ route('show.tag') }}">Tags</a></li>
                         <li><a href="invoice-report.html">Post</a></li>
                     </ul>
                 </li>
