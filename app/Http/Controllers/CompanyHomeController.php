@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hero;
+use App\Models\Homeaboutus;
 use Illuminate\Http\Request;
 
 class CompanyHomeController extends Controller
@@ -13,7 +14,12 @@ class CompanyHomeController extends Controller
     public function Index()
     {
 
-        return view('company.homepage');
+        $aboutushome = Homeaboutus::first();
+        return view('company.homepage' , [
+
+                'homeaboutdata'       => $aboutushome,
+
+        ]);
     }
 
 

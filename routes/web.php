@@ -31,6 +31,10 @@ use Illuminate\Support\Facades\Route;
     Route::post('/sliders-create' , [App\Http\Controllers\HomeHeroController::class, 'heroStore'])->name('hero.store');
     Route::get('/sliders-delete/{id}' , [App\Http\Controllers\HomeHeroController::class, 'heroDelete'])->name('hero.delete');
 
+    //About Us home Page
+    Route::get('/home-aboutus' , [App\Http\Controllers\HomeAboutusController::class, 'Index' ])->name('show.homeabout');
+    Route::get('/home-aboutus-create' , [App\Http\Controllers\HomeAboutusController::class, 'homeaboutusAdd' ])->name('homeabout.add');
+    Route::post('/home-aboutus-create' , [App\Http\Controllers\HomeAboutusController::class, 'homeaboutusStore' ])->name('homeabout.store');
 
 
 

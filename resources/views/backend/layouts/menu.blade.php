@@ -12,7 +12,7 @@
                     <a href="{{ route('show.hero') }}"><i class="fe fe-layout"></i> <span>Home Slider</span></a>
                 </li>
                 <li>
-                    <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Abouts Us</span></a>
+                    <a href="{{ route('show.homeabout') }}"><i class="fe fe-layout"></i> <span>Home Abouts Us</span></a>
                 </li>
                 <li>
                     <a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Home Services</span></a>
