@@ -44,5 +44,20 @@ use Illuminate\Support\Facades\Route;
     Route::post('/home-services' , [App\Http\Controllers\HomeServicesController::class , 'homeServicesStore'])->name('homeservices.store');
 
 
+    //home Protifolio
+    Route::get('/home-protfolio' , [App\Http\Controllers\HomeProtfolioController::class , 'Index'])->name('show.homeprotfolio');
+    Route::get('/home-protfolio-add' , [App\Http\Controllers\HomeProtfolioController::class , 'homeProtfolioAdd'])->name('homeprotfolio.add');
+    Route::post('/home-protfolio-add' , [App\Http\Controllers\HomeProtfolioController::class , 'homeProtfolioStore'])->name('homeprotfolio.store');
+
+    //Route for Client
+
+    Route::get('/home-clients' , [App\Http\Controllers\HomeClientController::class, 'Index'])->name('show.homeclient');
+    Route::get('/home-clients-create' , [App\Http\Controllers\HomeClientController::class, 'homeClientAdd'])->name('homeclient.add');
+    Route::post('/home-clients-create' , [App\Http\Controllers\HomeClientController::class, 'homeClientStore'])->name('homeclient.store');
+
+
+
+
     //Show Home Page (Front End)
     Route::get('/home' , [App\Http\Controllers\CompanyHomeController::class , 'Index'])->name('show.homepage');
+
