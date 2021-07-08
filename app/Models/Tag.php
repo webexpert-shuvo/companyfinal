@@ -12,4 +12,19 @@ class Tag extends Model
     protected $guarded = [];
 
 
+    //Image Upload
+
+    public function post()
+    {
+        return $this -> belongsToMany('App\Models\Bolg');
+    }
+
+
+
+
+
+
+
+
+
 }

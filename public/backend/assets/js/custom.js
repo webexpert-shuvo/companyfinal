@@ -312,7 +312,9 @@
 
 
 
-         CKEDITOR.replace( 'logcontent' );
+         CKEDITOR.replace('logcontent');
+         $('.selectdata').select2();
+
 
 
     });
@@ -322,8 +324,3 @@
 
 
 })(jQuery)
-
-
-
-
-

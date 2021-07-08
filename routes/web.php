@@ -75,6 +75,15 @@ use Illuminate\Support\Facades\Route;
     Route::get('/tag-delete/{id}' , [App\Http\Controllers\TagController::class, 'tagDelete'])->name('tag.delete');
 
 
+
+    //Post Route
+    Route::get('/blog', [App\Http\Controllers\BlogPostController::class , 'Index'])->name('show.blog');
+    Route::get('/blog-create', [App\Http\Controllers\BlogPostController::class , 'blogCreate'])->name('blog.create');
+    Route::post('/blog-create', [App\Http\Controllers\BlogPostController::class , 'blogStore'])->name('blog.store');
+
+
+
     //Show Home Page (Front End)
     Route::get('/home' , [App\Http\Controllers\CompanyHomeController::class , 'Index'])->name('show.homepage');
+    Route::get('/posts' , [App\Http\Controllers\PostHomepageController::class , 'Index'])->name('show.postpage');
 

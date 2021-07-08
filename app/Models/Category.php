@@ -11,6 +11,11 @@ class Category extends Model
 
     protected $guarded = [];
 
+    public function post()
+    {
+       return $this -> belongsToMany('App\Models\Bolg');
+    }
+
 
 
 
