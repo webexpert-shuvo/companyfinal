@@ -55,9 +55,8 @@
                 </article>
             @endforeach
 
-            {{ $posts -> links('company.paginate') }}
 
-
+            <x-Paginate />
 
 
 
