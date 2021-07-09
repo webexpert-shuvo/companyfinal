@@ -34,7 +34,7 @@
                     </div>
 
                     <h2 class="entry-title">
-                    <a href="">{{ $post -> name }}</a>
+                    <a href="{{ route('show.postsingle' , $post -> slug ) }}">{{ $post -> name }}</a>
                     </h2>
 
                     <div class="entry-meta">

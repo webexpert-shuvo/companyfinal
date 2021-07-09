@@ -71,9 +71,6 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
         </div>
@@ -81,7 +78,7 @@
         <div class="row portfolio-container" data-aos="fade-up">
 
             @foreach ($homegallery -> image as $gallery)
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="col-lg-4 col-md-6 portfolio-item card_data">
                     <img src="{{ URL::to('') }}/backend/assets/img/gallery/{{ $gallery  -> imagename }}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                     <h4>{{ $homegallery -> name }}</h4>
@@ -91,9 +88,6 @@
                     </div>
                 </div>
             @endforeach
-
-
-
 
         </div>
 

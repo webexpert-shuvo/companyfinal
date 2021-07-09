@@ -86,4 +86,5 @@ use Illuminate\Support\Facades\Route;
     //Show Home Page (Front End)
     Route::get('/home' , [App\Http\Controllers\CompanyHomeController::class , 'Index'])->name('show.homepage');
     Route::get('/posts' , [App\Http\Controllers\PostHomepageController::class , 'Index'])->name('show.postpage');
+    Route::get('/posts-single' , [App\Http\Controllers\SingleBlogController::class , 'Index'])->name('show.postsingle');
 
